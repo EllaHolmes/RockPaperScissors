@@ -3,27 +3,29 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="styleRPS.css">
+<script type = "text/javascript" src="logicRPS.js"></script>
 </head>
 
 <body>
 
 <div class = "title">
   <h1>Rock, Paper, Scissors!</h1>
-  <h3>Click an image below to make your move.</h3>
+  <h3 id = "instructions">Click an image below to make your move.</h3>
  </div>
 
- <div class = "rps">
-<input type ="image"
+<div class = "rps">
+
+  <input type ="image"
    src="http://th05.deviantart.net/fs70/PRE/i/2013/012/c/6/rock_01_png___by_alzstock-d5r84up.png"
-   alt="Submit"  align = "middle" width="200" height="200">
+   alt="Rock"  onclick = "clickRock()" align = "middle" width="200" height="200">
 
    <input type ="image"
    src="https://www.eckersleys.com.au/site/assets/media/Products/Jasart/Jasart_Creativity_Paper/JAS-PAP-Creativity-Bright-Paper.jpg"
-   alt="Submit" align = "middle" width="200" height="200">
+   alt="Paper" onclick = "clickPaper()" align = "middle" width="200" height="200">
 
    <input type ="image"
    src="http://sewmuchforquilting.com/wp-content/gallery/scissors/The-Original-Orange-Handled-Scissors-8.png"alt="Submit"
-   align = "middle" width="200" height="200">
+   onclick ="clickScissor()" align = "middle" width="200" height="200">
    
  </div>
 
