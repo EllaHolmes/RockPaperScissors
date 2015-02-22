@@ -4,6 +4,8 @@
 <head>
 <link rel="stylesheet" type="text/css" href="styleRPS.css">
 <script type = "text/javascript" src="logicRPS.js"></script>
+<script src="http://js.leapmotion.com/0.2.0/leap.min.js"></script>
+<script src="leaptrainer.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +30,23 @@
    onclick ="clickScissor()" align = "middle" width="200" height="200">
    
  </div>
+
+ <script>
+ var trainer = new LeapTrainer.Controller();
+
+ //rock
+ trainer.fromJSON('{"name":"ROCK","pose":true,"data":[[{"x":0.3472222222222222,"y":0.08609917673484405,"z":0.01133683388848954,"stroke":1},{"x":0.3055555555555556,"y":0.07576727552666265,"z":0.009976413821870759,"stroke":1},{"x":-0.6527777777777778,"y":-0.16186645226150673,"z":-0.021313247710360302,"stroke":1}]]}');
+ trainer.on('ROCK', function(){ clickRock(); });
+
+ //paper
+trainer.fromJSON('{"name":"PAPER","pose":true,"data":[[{"x":0.1610255756376623,"y":0.010373311840793417,"z":0.11830066748848889,"stroke":1},{"x":0.05466662416448048,"y":0.0023139201114014962,"z":0.10942372479710227,"stroke":1},{"x":-0.051692327308701325,"y":-0.005745471617990428,"z":0.10054678210571577,"stroke":1},{"x":-0.15805127878188316,"y":-0.013804863347382353,"z":0.09166983941432905,"stroke":1},{"x":-0.264410230255065,"y":-0.021864255076774274,"z":0.08279289672294243,"stroke":1},{"x":-0.3707691817282468,"y":-0.02992364680616593,"z":0.07391595403155582,"stroke":1},{"x":0.6292308182717532,"y":0.05865100489611808,"z":-0.5766498645601343,"stroke":1}]]}');
+ trainer.on('PAPER', function(){ clickPaper(); });
+
+
+ //scissor
+trainer.fromJSON('{"name":"SCISSOR","pose":true,"data":[[{"x":-0.0075347204992794944,"y":-0.13290351652866275,"z":0.2900193289161279,"stroke":1},{"x":-0.03235965803935893,"y":-0.10001160344163808,"z":0.23666022369462414,"stroke":1},{"x":-0.05718459557943836,"y":-0.0671196903546134,"z":0.18330111847312014,"stroke":1},{"x":0.09707897411807678,"y":0.3000348103249142,"z":-0.7099806710838721,"stroke":1}]]}');
+ trainer.on('SCISSOR', function(){ clickScissor(); });
+ </script>
 
 </body>
 </html>
